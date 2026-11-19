@@ -17,3 +17,17 @@ Buildless, responsive studio website. Serve `dist` with any static HTTP server.
 - `dist/assets/`: existing Shveli brand and product imagery.
 
 To add a project, duplicate the `.project` article and provide its own project details dialog and trigger. Update the selected-work count.
+
+## GitHub Pages
+
+The website is hosted at https://cabtava.github.io/weblean/.
+Pages publishes the root of the `gh-pages` branch. The editable source remains in `dist/` on `main`.
+
+After committing website changes to `main`, publish with:
+
+```powershell
+git push origin main
+git subtree push --prefix=dist origin gh-pages
+```
+
+Do not change Pages to `main /`: that folder contains project documentation, not the website entry point.
